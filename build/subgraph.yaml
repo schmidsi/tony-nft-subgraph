@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: TonyNFT
@@ -22,7 +22,7 @@ dataSources:
         - Unpaused
       abis:
         - name: TonyNFT
-          file: ./abis/TonyNFT.json
+          file: TonyNFT/abis/TonyNFT.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,indexed uint256)
           handler: handleApproval
@@ -36,4 +36,4 @@ dataSources:
           handler: handleTransfer
         - event: Unpaused(address)
           handler: handleUnpaused
-      file: ./src/tony-nft.ts
+      file: TonyNFT/TonyNFT.wasm
